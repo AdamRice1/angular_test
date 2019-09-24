@@ -1,0 +1,23 @@
+<h2>Current Polls</h2><button class="btn btn-secondary" [routerLink]="['/home']">Log Out </button>
+<button class="btn btn-primary" [routerLink]="['/create']">Create New Question</button>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Question</th>
+      <th scope="col">Date</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor='let survey of surveys'>
+      <td>{{people[(people.length-1)].name}}</td>
+      <a [routerLink]="['/vote/'+survey._id]"><td>{{survey.question}}</td></a>
+      <td>{{survey.updatedAt}}</td>
+      <td><button class='btn btn-danger' (click) = "deleteOneProduct(survey._id)">Delete</button></td>
+    </tr>
+  </tbody>
+</table>
+
+
+

@@ -1,0 +1,38 @@
+<div>
+        <h3>Create A New Product</h3> <button class='btn btn-secondary' [routerLink]="['/surveys']">Cancel</button>
+        <h1>{{errMsg}}</h1>
+        <h1>{{err_one}}</h1>
+        <h1>{{err_two}}</h1>
+        <h1>{{err_three}}</h1>
+        <h1>{{err_four}}</h1>
+        <form (submit) = "onSubmit()">
+            <input type="hidden" class='form-control' value="{{name}}" name="newQuestion.human" [(ngModel)]="newQuestion.human">
+            <div class='form-group'>
+                <label for='exampleInputEmail1'>Question:</label>
+                <input type='text' required='true' minlength="4" class='form-control' name="newQuestion.question" [(ngModel)]="newQuestion.question">
+            </div>
+            <div class='form-group'>
+                <label for='exampleInputEmail1'>Option One:</label>
+                <input type='text' required='true' class='form-control' name="newQuestion.option_one" [(ngModel)]="newQuestion.option_one">
+            </div>
+            <div class='form-group'>
+                <label for='exampleInputEmail1'>Option Two:</label>
+                <input type='text' required='true' class='form-control' name="newQuestion.option_two" [(ngModel)]="newQuestion.option_two">
+            </div>
+            <div class='form-group'>
+                <label for='exampleInputEmail1'>Option Three:</label>
+                <input type='text' required='true' class='form-control' name="newQuestion.option_three" [(ngModel)]="newQuestion.option_three">
+            </div>
+            <div class='form-group'>
+                <label for='exampleInputEmail1'>Option Four:</label>
+                <input type='text' required='true' class='form-control' name="newQuestion.option_four" [(ngModel)]="newQuestion.option_four">
+            </div>
+            <input type='submit' class='btn btn-success' value='Create'>
+        </form>
+        <p>{{last_user}}</p>
+    </div>
+    <style>
+    h1{
+        color: red;
+    }
+    </style>

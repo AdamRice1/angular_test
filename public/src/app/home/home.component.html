@@ -1,0 +1,8 @@
+<form (submit) = "onSubmit()">
+    <div class='form-group'>
+    <label class="exampleInputEmail1">Your Name:</label>
+    <input class='form-control' type= 'text' name='newUser.name' [(ngModel)]="newUser.name">
+    </div>
+    <input class="btn btn-primary" type="submit" value='Login'>
+</form>
+<p>{{errMsg}}</p>
